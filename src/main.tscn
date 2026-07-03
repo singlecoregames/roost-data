@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://nestling_main"]
+
+[ext_resource type="Script" path="res://src/player.gd" id="1_player"]
+[ext_resource type="Script" path="res://src/ui/hud.gd" id="2_hud"]
+[ext_resource type="Texture2D" path="res://assets/textures/tileset.png" id="3_tiles"]
+[ext_resource type="Script" path="res://src/enemies/crow.gd" id="4_crow"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Ground" type="TileMap" parent="."]
+tile_set = ExtResource("3_tiles")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(64, 160)
+script = ExtResource("1_player")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Player"]
+
+[node name="Chirp" type="AudioStreamPlayer2D" parent="Player"]
+
+[node name="Crow" type="CharacterBody2D" parent="."]
+position = Vector2(320, 96)
+script = ExtResource("4_crow")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("2_hud")

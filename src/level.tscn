@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://nestling_level_01"]
+
+[ext_resource type="PackedScene" uid="uid://nestling_main" path="res://src/main.tscn" id="1_main"]
+[ext_resource type="Script" path="res://src/camera.gd" id="2_camera"]
+[ext_resource type="Texture2D" path="res://assets/textures/tileset.png" id="3_tiles"]
+
+[node name="Level01" type="Node2D"]
+
+[node name="Main" parent="." instance=ExtResource("1_main")]
+
+[node name="Camera" type="Camera2D" parent="."]
+script = ExtResource("2_camera")
+look_ahead = 48.0
+
+[node name="Tiles" type="TileMap" parent="."]
+tile_set = ExtResource("3_tiles")
