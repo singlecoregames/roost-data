@@ -8,7 +8,7 @@ A small pixel platformer about a fledgling learning to fly. Built with Godot 4.
 
 - [x] Player movement and jump
 - [x] Gliding
-- [ ] Double jump
+- [x] Double jump
 - [ ] Night mode
 - [ ] First stage: "The Old Oak"
 
