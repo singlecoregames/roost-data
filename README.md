@@ -18,7 +18,8 @@ A small pixel platformer about a fledgling learning to fly. Built with Godot 4.
 |---|---|
 | `src/` | GDScript, scenes |
 | `assets/sprites/` | Aseprite sources and exported PNGs |
-| `assets/models/` | 3D props (glTF) |
+| `assets/models/` | 3D props (glTF, FBX) |
+| `assets/audio/` | Sound effects |
 | `docs/` | Design notes |
 
 ## Run
