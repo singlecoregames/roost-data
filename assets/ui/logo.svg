@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" width="240" height="120">
+  <rect width="240" height="120" rx="16" fill="#fafaf7"/>
+  <g fill="#17968b">
+    <ellipse cx="60" cy="70" rx="34" ry="24"/>
+    <circle cx="92" cy="50" r="16"/>
+    <path d="M106 48l18 6-18 6z" fill="#26262e"/>
+    <path d="M28 66l-18-8 14 20z"/>
+  </g>
+  <text x="130" y="78" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#26262e">Nestling</text>
+</svg>

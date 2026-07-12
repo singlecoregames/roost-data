@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nestling - design diary</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<article>
+<header>
+  <p class="kicker">Design diary · entry 3</p>
+  <h1>Why the chick never dies</h1>
+  <p class="byline">Nestling Dev · July 2026 · 4 min read</p>
+</header>
+
+<p>Every platformer I loved as a kid punished falling. You misjudged a gap, the screen flashed, and you were back at the start of the level. Nestling started from the opposite idea: what if the ground was never the enemy? A fledgling that has just left the nest is clumsy, not fragile. It tumbles, it flaps, it lands badly and shakes it off.</p>
+
+<p>So the chick cannot die from a fall. Landing costs nothing. The only things that hurt are crows, and later hawks and water. That single rule changed everything downstream: jumps could be floaty, the glide could be slow, and levels could be tall instead of long.</p>
+
+<h2>The world, roughly</h2>
+
+<figure>
+  <img src="../world-map.png" alt="Hand-drawn world map with four levels connected by a dotted path">
+  <figcaption>The vertical slice: four levels climbing from the old oak to the lantern path. The canopy is a maybe.</figcaption>
+</figure>
+
+<p>Levels are stacked bottom to top. You start at the foot of the old oak and the whole game is one long climb, with the river as the only place the path goes sideways. Night falls as you climb, which is a tidy way to introduce the lantern without a tutorial.</p>
+
+<h2>What the chick can do</h2>
+
+<p>The state machine is small on purpose. There are five states and most of the design work went into the transitions between them, especially how quickly a glide can turn back into a flap.</p>
+
+<figure class="diagram">
+<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Player state diagram">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5 0 10z" fill="#4e3a28"/></marker></defs>
+  <g fill="none" stroke="#4e3a28" stroke-width="2" marker-end="url(#a)">
+    <path d="M140 60 H250"/><path d="M370 60 H470"/><path d="M530 90 V140"/><path d="M470 170 H340"/><path d="M280 200 V240"/><path d="M200 240 C120 240 100 120 130 90"/>
+    <path d="M310 90 C330 120 400 120 470 160" stroke-dasharray="6 5"/>
+  </g>
+  <g font-family="-apple-system, Helvetica, sans-serif" font-size="15" text-anchor="middle">
+    <rect x="40" y="35" width="100" height="50" rx="12" fill="#e8f2ef" stroke="#17968b" stroke-width="2"/><text x="90" y="65">Idle</text>
+    <rect x="250" y="35" width="120" height="50" rx="12" fill="#e8f2ef" stroke="#17968b" stroke-width="2"/><text x="310" y="65">Run</text>
+    <rect x="470" y="35" width="120" height="50" rx="12" fill="#fdf1d6" stroke="#f2b84b" stroke-width="2"/><text x="530" y="65">Jump</text>
+    <rect x="470" y="140" width="120" height="50" rx="12" fill="#fdf1d6" stroke="#f2b84b" stroke-width="2"/><text x="530" y="170">Double jump</text>
+    <rect x="220" y="140" width="120" height="50" rx="12" fill="#fbe3dc" stroke="#e8705c" stroke-width="2"/><text x="280" y="170">Glide</text>
+    <rect x="200" y="240" width="160" height="50" rx="12" fill="#e8f2ef" stroke="#17968b" stroke-width="2"/><text x="280" y="270">Land (no damage)</text>
+    <g font-size="12" fill="#6f6f78"><text x="195" y="52">move</text><text x="420" y="52">jump</text><text x="560" y="120">jump again</text><text x="405" y="160">hold</text><text x="300" y="225">release</text><text x="80" y="170">reset</text></g>
+  </g>
+</svg>
+<figcaption>Five states. The dashed edge is the one playtesters keep asking for: gliding straight out of a run.</figcaption>
+</figure>
+
+<h2>What I got wrong</h2>
+
+<p>The first build let you glide forever. It felt great for about a minute and then the levels stopped mattering, because you could cross anything. The fix was not a stamina bar. Glide now slowly loses height, and the double jump only refreshes when you touch a branch. Crows became the pacing tool: they push you down, and being pushed down is fine, because the ground is safe.</p>
+
+<blockquote>Make the world scary and the ground kind.</blockquote>
+
+<p>Next entry: the lantern, and why night mode has no music.</p>
+
+<footer>Nestling design diary · <a href="../design.md">design.md</a> · <a href="../CHANGELOG.md">changelog</a></footer>
+</article>
+</body>
+</html>

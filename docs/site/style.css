@@ -1,0 +1,16 @@
+:root { --ink: #26262e; --paper: #fbfaf6; --teal: #17968b; --sub: #6f6f78; --line: #e6e4dc; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 18px/1.65 Georgia, "Times New Roman", serif; }
+article { max-width: 640px; margin: 0 auto; padding: 36px 22px 60px; }
+header { margin-bottom: 28px; }
+.kicker { margin: 0; font: 600 13px/1.4 -apple-system, Helvetica, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); }
+h1 { margin: 8px 0 8px; font: 700 40px/1.12 -apple-system, Helvetica, sans-serif; letter-spacing: -.02em; }
+.byline { margin: 0; color: var(--sub); font: 15px -apple-system, Helvetica, sans-serif; }
+h2 { margin: 36px 0 10px; font: 700 24px/1.25 -apple-system, Helvetica, sans-serif; }
+p { margin: 0 0 18px; }
+figure { margin: 24px 0; }
+figure img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
+figure svg { width: 100%; height: auto; }
+figcaption { margin-top: 8px; font: 14px/1.5 -apple-system, Helvetica, sans-serif; color: var(--sub); }
+blockquote { margin: 24px 0; padding: 8px 0 8px 18px; border-left: 4px solid var(--teal); font-style: italic; font-size: 22px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--sub); font: 14px -apple-system, Helvetica, sans-serif; }
+footer a { color: var(--teal); }

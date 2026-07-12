@@ -1,0 +1,79 @@
+{
+  "version": 2,
+  "levels": [
+    {
+      "id": "oak-01",
+      "name": "Old Oak",
+      "biome": "forest",
+      "size": [
+        96,
+        24
+      ],
+      "par_time": 48,
+      "spawns": {
+        "seeds": 14,
+        "crows": 1,
+        "checkpoints": 2
+      },
+      "music": "audio/forest.ogg"
+    },
+    {
+      "id": "oak-02",
+      "name": "Hollow Trunk",
+      "biome": "forest",
+      "size": [
+        128,
+        32
+      ],
+      "par_time": 70,
+      "spawns": {
+        "seeds": 22,
+        "crows": 2,
+        "checkpoints": 3
+      },
+      "music": "audio/forest.ogg"
+    },
+    {
+      "id": "river-01",
+      "name": "Reed Bank",
+      "biome": "river",
+      "size": [
+        160,
+        28
+      ],
+      "par_time": 85,
+      "spawns": {
+        "seeds": 18,
+        "crows": 3,
+        "checkpoints": 3
+      },
+      "hazards": [
+        "water"
+      ],
+      "music": "audio/river.ogg"
+    },
+    {
+      "id": "night-01",
+      "name": "Lantern Path",
+      "biome": "forest",
+      "size": [
+        120,
+        24
+      ],
+      "par_time": 90,
+      "spawns": {
+        "seeds": 10,
+        "crows": 4,
+        "checkpoints": 4
+      },
+      "night": true,
+      "music": "audio/night.ogg"
+    }
+  ],
+  "tuning": {
+    "jump_velocity": -330,
+    "double_jump_velocity": -290,
+    "glide_gravity_scale": 0.35,
+    "lantern_radius": 96
+  }
+}

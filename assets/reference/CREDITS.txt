@@ -1,0 +1,5 @@
+hoatzin-photo.jpg — Hoatzin (Opisthocomus hoazin), photo by Philipp Hoenle, 2023-10-28.
+License: CC0 1.0 Universal (public domain dedication) — https://creativecommons.org/publicdomain/zero/1.0/
+Source: https://www.inaturalist.org/photos/335722298
+Via Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Opisthocomus_hoazin_335722298.jpg
+Cropped to 3:4 portrait for the Nestling sample repository.
