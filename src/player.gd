@@ -4,12 +4,14 @@ class_name Player
 ## A fledgling that just left the nest — runs, jumps, glides.
 
 const SPEED := 140.0
-const JUMP_VELOCITY := -320.0
+const JUMP_VELOCITY := -340.0  # the night wind carries you
+const NIGHT_LIGHT_RADIUS := 96.0
 const GLIDE_GRAVITY_SCALE := 0.35
 const MAX_JUMPS := 2
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 @onready var chirp: AudioStreamPlayer2D = $Chirp
+@onready var lantern: PointLight2D = $Lantern
 
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 var jumps_left := MAX_JUMPS
@@ -31,4 +33,5 @@ func _physics_process(delta: float) -> void:
 	velocity.x = direction * SPEED if direction else move_toward(velocity.x, 0, SPEED)
 	sprite.flip_h = velocity.x < 0
 	sprite.play("fly" if not is_on_floor() else "idle")
+	lantern.texture_scale = NIGHT_LIGHT_RADIUS / 64.0 if DayNight.is_night else 0.0
 	move_and_slide()
