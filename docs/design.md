@@ -23,5 +23,5 @@ const JUMP_VELOCITY := -320.0
 
 ## Open questions
 
-- Night mode: only the lantern radius is visible. Crows avoid the light.
+- ~~Night mode~~ → in progress: lantern radius 96px, 90 s cycle
 - Boss: an owl?
