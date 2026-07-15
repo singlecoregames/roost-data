@@ -15,11 +15,11 @@
 ## Jump numbers
 
 ```gdscript
-const SPEED := 140.0
-const JUMP_VELOCITY := -320.0
+const SPEED := 150.0
+const JUMP_VELOCITY := -300.0
 ```
 
-> Playtest note: the jump is a touch high. Clearing 2.5 tiles breaks the puzzles.
+> Playtest note: jump lowered to -300. Two tiles is the ceiling.
 
 ## Open questions
 

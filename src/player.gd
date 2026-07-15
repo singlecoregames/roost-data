@@ -3,8 +3,8 @@ class_name Player
 
 ## A fledgling that just left the nest — runs, jumps, glides.
 
-const SPEED := 140.0
-const JUMP_VELOCITY := -320.0
+const SPEED := 150.0
+const JUMP_VELOCITY := -300.0  # playtest: jump felt too high
 const GLIDE_GRAVITY_SCALE := 0.35
 const MAX_JUMPS := 2
 
