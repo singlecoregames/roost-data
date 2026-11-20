@@ -27,3 +27,5 @@ A small pixel platformer about a fledgling learning to fly. Built with Godot 4.
 ```bash
 godot --path . --editor
 ```
+
+Testing Shortcuts
