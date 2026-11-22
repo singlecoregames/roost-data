@@ -1,4 +1,4 @@
-# Nestling?
+# Nestling is good
 
 A small pixel platformer about a fledgling learning to fly. Built with Godot 4.
 - 이게 되네
