@@ -3,6 +3,7 @@
 ## Core loop
 
 1. Gather seeds → 2. Return to the nest → 3. Earn a new feather (ability)
+Uninstall
 
 ## Controls
 
